@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: grade-submission-api
-  namespace: mch
+  namespace: kusto
   labels:
     app: devgrade-submission-api
 
