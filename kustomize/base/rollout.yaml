@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: grade-submission-api
-          image: nginx:1.28
+          image: nginx:1.29
           ports:
             - containerPort: 3000
   strategy:
