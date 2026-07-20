@@ -2,38 +2,31 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: grade-submission-api
-  namespace: kusto
+  namespace: grade-demo
   labels:
-    app: devgrade-submission-api
-
+    app: grade-submission
 spec:
-  replicas: 2
-
+  replicas: 3
   selector:
     matchLabels:
-      app: grade-submission-api
-
+      app: grade-submission
   template:
     metadata:
       labels:
-        app: grade-submission-api
-
+        app: grade-submission
     spec:
       containers:
         - name: grade-submission-api
-          image: nginx:latest
+          image: nginx:1.27
           ports:
-            - containerPort: 80
-
+            - containerPort: 3000
   strategy:
     canary:
       steps:
         - setWeight: 20
         - pause:
             duration: 30s
-
         - setWeight: 50
         - pause:
             duration: 60s
-
         - setWeight: 100
