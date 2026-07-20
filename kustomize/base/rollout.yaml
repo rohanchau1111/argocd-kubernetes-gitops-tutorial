@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: grade-submission-api
+  name: devgrade-submission-api
   namespace: mch
   labels:
     app: devgrade-submission-api
