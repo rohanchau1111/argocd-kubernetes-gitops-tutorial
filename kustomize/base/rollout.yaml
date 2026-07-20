@@ -4,7 +4,7 @@ metadata:
   name: grade-submission-api
   namespace: mch
   labels:
-    app: grade-submission-api
+    app: devgrade-submission-api
 
 spec:
   replicas: 2
