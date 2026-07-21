@@ -7,6 +7,7 @@ metadata:
     app: grade-submission
 spec:
   replicas: 2
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: grade-submission
